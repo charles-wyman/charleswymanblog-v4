@@ -1,8 +1,14 @@
 <ion-app>
-  <ion-split-pane>
     <ion-menu>
-      <ion-header>
+      <ion-header  padding>
         <ion-toolbar>
+            <ion-buttons style="float: right;">        
+                <ion-menu-button>
+                    <ion-menu-toggle>                
+                        <ion-icon name="arrow-dropleft-circle"></ion-icon>                
+                    </ion-menu-toggle>
+                </ion-menu-button>
+            </ion-buttons>
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
@@ -13,12 +19,11 @@
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>
                 {{p.title}}
-              </ion-label>
+              </ion-label>              
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
 </ion-app>

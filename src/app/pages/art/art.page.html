@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>art</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+      <ion-card-content>
+          <p padding>
+              As a graphic artist I have done many designs over the years. I have used the Adobe Suite to create images and animations both personally and professionally. I have included below a collection of art that I have done personally for different concerts throughout the years. They are listed in no particular order.
+          </p>
+      </ion-card-content>
+  </ion-card>
+  <ion-grid style="margin:auto">
+      <ion-row wrap style="margin:auto">
+          <ion-col *ngFor="let img of imgs" style="margin:auto; min-width: 25%; border-radius:6px" >
+              <img src={{img}} style="display: block; margin: auto"/>
+          </ion-col>
+      </ion-row>
+  </ion-grid>  
+
+</ion-content>

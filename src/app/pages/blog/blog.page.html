@@ -1,0 +1,21 @@
+<app-page-header [title]="title"></app-page-header>
+
+<ion-content padding>  
+  <ion-card class='blog-entry' *ngFor="let entry of entries; let i = index;">
+      <ion-card-header (click)="toggleEntry(i)">          
+          <div class='blog-title'>
+              <img src='../assets/imgs/techno-brain.jpg' />
+              <h2>{{entry.title}}
+              <ion-icon color="#00FFFF" item-right [name]="isVisibleEntry(i) ? 'arrow-dropdown-circle' : 'arrow-dropright-circle'"></ion-icon>
+              </h2>
+          </div>
+      </ion-card-header>
+      <ion-card-content *ngIf="isVisibleEntry(i)">                  
+          <div class='blog-author'>Author: {{entry.author}}</div>
+          <div class='blog-date'>Posted at <br/>
+                              {{entry.time}} on <br /> 
+                              {{entry.date}}</div>
+          <p padding *ngFor="let paragraph of entry.content;">{{paragraph}}</p>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+[ {   "title" : "My First Entry",
+        "author" : "Charles Wyman",
+        "time" : "12:35 a.m. Eastern Time",
+        "date" : "12/13/17",
+        "content" : 
+            [
+                "Welcome to Charles Wyman Programming - a blog about building blogs! This site is powered by Ionic 3 framework. Ionic 3 extends the AngularJS 5.0 framework as well as provides a means for rapid deployment of Cordova projects. Code is written using TypeScript. Imagine creating a web app that can almost effortlessly be translated into an Android, iOS, or Blackberry application! This is the power of Ionic.", 
+                "Development of this site started with the decision to use the Ionic framework. This framework was chosen with the idea of mobile/web hybrid development first in mind. The initial build took place in a Windows environment. This proved a little tricky at first. NPM, Node, and Python had to be updated. For Ionic 3 in Windows, the correct package versions had to be chosen - a true testament to the caveat that the latest and greatest version is not always the right choice. This is a lesson that I took to heart from an early age - my first experience with these issues were back in 1998 when I would create linux Slackware builds on the old 486 machine. Ah, memories.",
+                "Proceeding apace with the build, some time was spent on the design. As of this writing I have chosen a simple blue/green color scheme. This aligns well with modern designs, implementing color schemas used by such popular sites as Facebook, Twitter, TechCrunch, and Slashdot. The use of SCSS/SASS provides plenty of room to easily implement different themes in the future.", 
+                "Creating responsive designs is of utmost importance in designing hybrid applications. It is not a feature that one should lightly attempt to shoehorn in after completing a project. Again, Ionic does a fair amount of the heavy lifting in this particular scenario. A good framework should provide simple solutions to old problems, no? Ionic will not magically solve all problems, however. There are many little tips and tricks to designing for mobile specifically - design rules of thumb that should not be broken. This will make for good information in a future entry, I think.",
+                "Now that I have finished up the initial design and some basic UI Routing for navigating between pages, I am ready to move forward with some real code. This initial blog entry is necessary so that I can begin fashioning a data scheme for all blog entries. I will package up this blog entry with its different fields into a JSON object, and then write another blog entry tomorrow. In this way I will create a rudimentary content management system for the blog entries. Eventually I will need to create some sort of database to store blog entries. One thing at a time, though."
+            ]
+    },
+    {
+        "title" : "Components and service providers Oh My",
+        "author" : "Charles Wyman",
+        "time" : "1:43 p.m. Eastern Time",
+        "date" : "12/13/17",
+        "content" : [
+                "Todays tasks have been pretty straightfoward so far. The static blog entry that I created yesterday needed to be converted to something dynamic. At this time, Ive created a JSON object that will store all the information about a post. The blog.html will serve as the templateUrl for the component.",
+                "I have begun construction of a service provider for storing the JSON object that contains the entries. It appears that AngularJS5.0 is a bit tricky in that regard and I am working towards getting the right modules called. What is called inherently and what needs to called and the paths seems to have changed a bit since AngularJS2.0. Once I have the service provider built then I believe I will return to working on the design a bit more. I find it harder and harder these days to crunch code while there are still design elements that need to be worked out. I will return to developing the blog once it is time to move my blog entries to an external database, which will require updating the service provider that I am building today."
+            ]
+    }
+]

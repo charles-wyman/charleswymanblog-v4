@@ -9,3 +9,141 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+// http://ionicframework.com/docs/theming/
+
+
+
+
+
+// App Global Sass
+
+// --------------------------------------------------
+
+// Put style rules here that you want to apply globally. These
+
+// styles are for the entire app and not just one component.
+
+// Additionally, this file can be also used as an entry point
+
+// to import other Sass files to be included in the output CSS.
+
+//
+
+// Shared Sass variables, which can be used to adjust Ionic's
+
+// default Sass variables, belong in "theme/variables.scss".
+
+//
+
+// To declare rules for a specific mode, create a child rule
+
+// for the .md, .ios, or .wp mode classes. The mode class is
+
+// automatically applied to the <body> element in the app.
+
+
+
+$color-green: #32cd32;
+$color-cyan: #00FFFF;
+$color-dark-cyan: #00e5e5;
+
+//$color-cyan: #505B94;
+
+
+
+@font-face {
+    font-family: 'Planet_Kosmos_Regular';
+    src: url('assets/fonts/Planet_Kosmos_Regular.TTF') format('truetype'),
+        url('assets/fonts/planet_kosmos_regular-webfont.woff') format('woff'),
+        url('assets/fonts/planet_kosmos_regular-webfont.woff2') format('woff2');
+}
+
+ion-header {
+    background-color: $color-cyan;
+}
+
+ion-toolbar {
+    --background: $color-cyan;     
+    font-size: 3vw;
+
+    ion-title {
+        font-family: 'Planet_Kosmos_Regular'; 
+        text-align:center; 
+        color: $color-green;
+        font-size: 3vw;        
+    }
+
+}
+
+.toolbar .toolbar-md {
+    background-color: black;
+}
+
+
+
+.sideMenuBtn {
+    background-color: $color-cyan;
+    color: $color-green;
+}
+
+
+
+ion-card-header img {
+    height: 40pt;
+    width: 40pt !important;
+    float: left;
+}
+
+
+
+ion-list .item-list .item-md {
+    background-color: blue;
+}
+
+ion-item {
+    background-color: #fff;
+    opacity: 0.95;
+}
+
+
+ion-card-header div {
+    padding-top: 15pt;
+}
+
+
+ion-content {
+    background-color: $color-cyan;
+}
+
+ion-menu {
+    ion-content {
+        --ion-background-color:$color-dark-cyan;
+        background-image: none;
+    }
+}
+
+ion-card {
+    opacity: .95;
+    text-align:center;
+    border-radius: 6px;
+    --ion-background-color: #fff;
+}
+
+ion-content {
+    --ion-background-color: none;
+    background-image: url('./assets/imgs/TechnoH.jpg');
+    background-size: 100%;
+}
+
+ion-menu .fixed-content {
+    background-color: $color-cyan;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.sc-ion-card-md-h {
+    --background: #FFF;
+}
