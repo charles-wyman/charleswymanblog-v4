@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
         body: 'I have written a blog to track my progress in creating this site and to have a place to speak about different topics in the IT industry as I see fit. Click here to check it out!', 
         clickable: true,
         link: 'blog'
-      }
+      },
       {
         title: 'Art',
         body: 'This page contains an art gallery featuring different graphic design put together by the author. Image are displayed as thumbnails and can be clicked on to present a full image with zooming features.',
