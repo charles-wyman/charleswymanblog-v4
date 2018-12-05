@@ -1,13 +1,7 @@
 <app-page-header [title]="title"></app-page-header>
 
-<ion-content padding>
-    <ion-card style="max-width:20%; min-width:200px;">
-        <ion-card-content>
-            <p style="font-style: italic">Welcome, Visitor!</p>
-            <p>{{time | date:'medium'}}</p>
-            <p>{{city}}</p>
-        </ion-card-content>
-    </ion-card>
+<ion-content padding>    
+    <app-clock></app-clock>
 
     <ion-card [ngClass]="{'clickable': card.clickable }" (click)="openPage(card.link, card.clickable)" *ngFor="let card of cards; let i = index;">
         <ion-card-header>
