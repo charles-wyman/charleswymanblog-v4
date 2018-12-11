@@ -15,8 +15,9 @@ export class ClockComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.city = 'Fetching Location...';
     this.getCurrentTime();
-    this.getLocation();
+    this.setCity();
   }
 
   ngOnDestroy() {
@@ -38,25 +39,23 @@ export class ClockComponent implements OnInit, OnDestroy {
       this.setTimer();
   }
 
-  private getLocation(): void {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(this.showPosition.bind(this));
-    } else {
-      this.city = 'Location Unavailable';
+  private formatLocationResults(result: Object): string {
+    if (result['city'].length && result['region'].length && result['postal'].length && result['country'].length) {
+      return `${result['city']}, ${result['region']}, ${result['postal']}, ${result['country']}`;
     }
+    return 'Location Unavailable';
   }
 
-  showPosition(position): void {
-    this.citySubscription = this.cityService.getCity(position.coords).subscribe(
+  private setCity(): void {
+    this.citySubscription = this.cityService.getCity().subscribe(
       (result) => {
-        this.city = result;
+          this.city = this.formatLocationResults(result);
       },
       (err) => {
         console.error(err);
         this.city = 'Location Unavailable';
       }
     );
-    console.log(this.city);
   }
 
 }
