@@ -31,7 +31,7 @@ export class ClockComponent implements OnInit, OnDestroy {
   private setTimer(): void {
     setTimeout(() => {
       this.getCurrentTime();
-    }, 1);
+    }, 1000);
   }
 
   private getCurrentTime(): void {
