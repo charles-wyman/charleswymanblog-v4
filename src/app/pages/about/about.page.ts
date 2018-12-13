@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.page.scss'],
 })
 export class AboutPage implements OnInit {
-  shownGroup: any;
+  shownGroup: number;
   title: string;
   constructor() { }
 
@@ -14,7 +14,7 @@ export class AboutPage implements OnInit {
     this.title = 'About';
   }
 
-  toggleGroup(group) {
+  toggleGroup(group: number): void {
     if (this.isGroupShown(group)) {
         this.shownGroup = null;
     } else {
@@ -22,7 +22,7 @@ export class AboutPage implements OnInit {
     }
   }
 
-isGroupShown(group) {
+  isGroupShown(group: number): boolean {
     return this.shownGroup === group;
   }
 
