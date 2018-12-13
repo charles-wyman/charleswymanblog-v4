@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtPage implements OnInit {
   imgs: Array<string> = [];
-
+  title: string;
   constructor() {
     this.imgs= ["assets/imgs/1.jpg", 
       "assets/imgs/2.jpg", 
@@ -21,6 +21,7 @@ export class ArtPage implements OnInit {
    }
 
   ngOnInit() {
+    this.title = 'Art';
   }
 
 }
