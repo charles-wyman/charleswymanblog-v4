@@ -1,18 +1,28 @@
 
-h2 {
-        padding-top: 5px !important;
-        font-size: 3vw !important;
-        font-style: bold !important;
-}
-
 p {
     white-space: normal;
 }
 
+h2 {
+
+}
+
 h3 {
-    white-space: nowrap;
+
+}
+
+h2, h3 {
     font-size: 3vw !important;
+}
+
+h4 {
+    font-size: 2vw !important;
+}
+
+h2, h3, h4 {
     font-weight: bold !important;
+    padding-top: 5px !important;
+    white-space: nowrap;
 }
 
 .skills {
