@@ -1,9 +1,39 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>contact</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-page-header [title]="title"></app-page-header>
 
-<ion-content padding>
+<ion-content padding>    
+  <form [formGroup]="contactForm">
+      <ion-item padding>
+          <ion-label>First Name</ion-label>
+          <ion-input formControlName="firstName" type='text'></ion-input>
+      </ion-item>
+      <ion-item padding>
+          <ion-label>Last Name</ion-label>
+          <ion-input formControlName="lastName" type='text'></ion-input>
+      </ion-item>
+      <ion-item padding>
+          <ion-label>E-mail Address</ion-label>
+          <ion-input formControlName="emailAddress" type='e-mail'></ion-input>
+      </ion-item>
+      <ion-item padding>
+          <ion-label>Subject</ion-label>
+          <ion-input formControlName="subject" type='text'></ion-input>            
+      </ion-item>
+      <ion-item padding>
+          <ion-label>Message</ion-label>
+          <ion-textarea autosize #message rows="1" formControlName="message" type='text'></ion-textarea>            
+      </ion-item>      
+      <ion-grid>
+          <ion-row justify-content-center>
+            <ion-col size="3"></ion-col>
+              <ion-col size="3">
+                  <ion-button full color="primary" (click)="submit()">Submit e-mail</ion-button>
+              </ion-col>
+              <ion-col size="3">
+                  <ion-button full color="primary" (click)="submit()">Reset</ion-button>
+              </ion-col>
+              <ion-col size="3"></ion-col>
+          </ion-row>
+      </ion-grid>
+  </form>
 
 </ion-content>
