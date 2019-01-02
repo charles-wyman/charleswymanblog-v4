@@ -7,7 +7,7 @@ import { CityService } from '../../services/city/city.service';
   styleUrls: ['./clock.component.scss']
 })
 export class ClockComponent implements OnInit, OnDestroy {
-  time: Date;
+  time: number;
   city: String;
   citySubscription: any;
 
@@ -24,10 +24,6 @@ export class ClockComponent implements OnInit, OnDestroy {
     this.citySubscription.unsubscribe();
   }
 
-  private getTimeStamp(): Date {
-    return new Date();
-  }
-
   private setTimer(): void {
     setTimeout(() => {
       this.getCurrentTime();
@@ -35,7 +31,7 @@ export class ClockComponent implements OnInit, OnDestroy {
   }
 
   private getCurrentTime(): void {
-      this.time = this.getTimeStamp();
+      this.time = Date.now();
       this.setTimer();
   }
 
