@@ -1,39 +1,47 @@
 <app-page-header [title]="title"></app-page-header>
 
-<ion-content padding>    
-  <form [formGroup]="contactForm">
-      <ion-item padding>
-          <ion-label>First Name</ion-label>
-          <ion-input formControlName="firstName" type='text'></ion-input>
-      </ion-item>
-      <ion-item padding>
-          <ion-label>Last Name</ion-label>
-          <ion-input formControlName="lastName" type='text'></ion-input>
-      </ion-item>
-      <ion-item padding>
-          <ion-label>E-mail Address</ion-label>
-          <ion-input formControlName="emailAddress" type='e-mail'></ion-input>
-      </ion-item>
-      <ion-item padding>
-          <ion-label>Subject</ion-label>
-          <ion-input formControlName="subject" type='text'></ion-input>            
-      </ion-item>
-      <ion-item padding>
-          <ion-label>Message</ion-label>
-          <ion-textarea autosize #message rows="1" formControlName="message" type='text'></ion-textarea>            
-      </ion-item>      
-      <ion-grid>
-          <ion-row justify-content-center>
-            <ion-col size="3"></ion-col>
-              <ion-col size="3">
-                  <ion-button full color="primary" (click)="submit()">Submit e-mail</ion-button>
-              </ion-col>
-              <ion-col size="3">
-                  <ion-button full color="primary" (click)="submit()">Reset</ion-button>
-              </ion-col>
-              <ion-col size="3"></ion-col>
-          </ion-row>
-      </ion-grid>
+<ion-content padding>
+  <form padding [formGroup]="contactForm" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input formControlName="firstName" ngControl="firstName" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input formControlName="lastName" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-mail Address</ion-label>
+      <ion-input formControlName="emailAddress" type="e-mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Subject</ion-label>
+      <ion-input formControlName="subject" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Message</ion-label>
+      <ion-textarea
+        autosize
+        #message
+        rows="10"
+        formControlName="message"
+        type="text"
+        placeholder="Enter more information here..."
+      ></ion-textarea>
+    </ion-item>
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col size="3"></ion-col>
+        <ion-col size="3">
+          <ion-button [disabled]="!contactForm.valid" full color="primary" type="submit"
+            >Submit e-mail</ion-button
+          >
+        </ion-col>
+        <ion-col size="3">
+          <ion-button full color="primary" (click)="reset()">Reset</ion-button>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+      </ion-row>
+    </ion-grid>
   </form>
-
 </ion-content>
