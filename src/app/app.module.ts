@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ArtModalPageModule } from '../app/pages/art-modal/art-modal.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -19,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ArtModalPageModule
   ],
   providers: [
     StatusBar,

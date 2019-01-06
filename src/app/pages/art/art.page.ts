@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ArtModalPage } from '../art-modal/art-modal.page';
 
 @Component({
   selector: 'app-art',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ArtPage implements OnInit {
   imgs: Array<string> = [];
   title: string;
-  constructor() {
+  constructor(public modalController: ModalController) {
     this.imgs= ["assets/imgs/1.jpg", 
       "assets/imgs/2.jpg", 
       "assets/imgs/3.jpg", 
@@ -24,4 +26,12 @@ export class ArtPage implements OnInit {
     this.title = 'Art';
   }
 
+  async presentModal() {
+    console.log('presentModal runs');
+    const modal = await this.modalController.create({
+      component: ArtModalPage,
+      componentProps: { value: 123 }
+    });
+    return await modal.present();
+  }
 }

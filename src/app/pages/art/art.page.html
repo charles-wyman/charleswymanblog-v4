@@ -11,7 +11,7 @@
   <ion-grid style="margin:auto">
       <ion-row wrap style="margin:auto">
           <ion-col *ngFor="let img of imgs" style="margin:auto; min-width: 25%; border-radius:6px" >
-              <img src={{img}} style="display: block; margin: auto"/>
+              <img src={{img}} (click)="presentModal()" style="display: block; margin: auto"/>
           </ion-col>
       </ion-row>
   </ion-grid>  
